@@ -145,7 +145,7 @@ Material:
       second: {r: 1, g: 0, b: 0, a: 0.7600867}
     - first:
         name: _PlayerPosition
-      second: {r: 246.4, g: 35.7, b: -58.2, a: 0}
+      second: {r: -21.4, g: 13.7, b: -58.2, a: 0}
     - first:
         name: _TopColor
       second: {r: 1, g: 1, b: 1, a: 1}
