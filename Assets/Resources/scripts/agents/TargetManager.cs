@@ -18,7 +18,14 @@ public class TargetManager : MonoBehaviour {
 	}
 
 	double gradient_ratio(int p, int m, int r, double penalty_multiplyer, double penalty_weight) {
-		return ((1 - penalty_weight) * (p+m+r) + penalty_weight * penalty_multiplyer * sync_penalty(p, m, r)) / 15.0;
+		double ratio = ((1 - penalty_weight) * (p+m+r) * 3 + penalty_weight * penalty_multiplyer * sync_penalty(p, m, r)) / 15.0;
+		if (ratio > 0) {
+			ratio = ratio * 0.6 + 0.4;
+		}
+		if (ratio > 1.0) {
+			ratio = 1.0;
+		}
+				return ratio;
 	}
 
 	// Use this for initialization

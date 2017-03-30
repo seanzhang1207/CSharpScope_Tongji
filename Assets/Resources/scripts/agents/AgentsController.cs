@@ -13,6 +13,7 @@ public class AgentsController : MonoBehaviour
 	public float _timeAtAmenity;
 	private Color _thisColor;
 	public int _dieAfter = 150;
+	public int _target_id;
 
 
 
@@ -38,8 +39,9 @@ public class AgentsController : MonoBehaviour
 	{
 		if (other.gameObject.tag == "amenity") {
 			_thisAgentNavMesh = this.GetComponent<NavMeshAgent> ();
-			StartCoroutine (killAfterTime ());
-
+			if (other.gameObject.GetComponent<TargetController> ().GetID () == _target_id) {
+				StartCoroutine (killAfterTime ());
+			}
 		}
 	}
 

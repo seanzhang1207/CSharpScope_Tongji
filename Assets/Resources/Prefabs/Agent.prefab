@@ -40,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010607123672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 4, y: 10, z: 4}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,7 +118,7 @@ TrailRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010607123672}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 1
@@ -225,8 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d05e856d95540fb8f5203ba1e629bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeAtAmenity: 0
+  _timeAtAmenity: 2
   _dieAfter: 60
+  _target_id: 0
 --- !u!195 &195000011243235222
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -234,11 +235,11 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010607123672}
   m_Enabled: 1
-  m_Radius: 1
-  m_Speed: 15
-  m_Acceleration: 5
+  m_Radius: 3
+  m_Speed: 50
+  m_Acceleration: 500
   avoidancePriority: 1
-  m_AngularSpeed: 10
+  m_AngularSpeed: 30
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -246,4 +247,4 @@ NavMeshAgent:
   m_Height: 1
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0

@@ -73,6 +73,7 @@ public class SpawnersController : MonoBehaviour
 			Transform randomTarget = TargetLocations [Random.Range (0, TargetLocations.Count / 3)];
 			agentNavMesh.SetDestination (randomTarget.position);
 			agentNavMesh.GetComponent<Renderer> ().material.color = Color.red;
+			agent.GetComponent <AgentsController> ()._target_id = randomTarget.gameObject.GetComponent <TargetController> ().GetID ();
 			agent.tag = "Rich"; 
 
 		} else if (value > 30 && value < 60) { //or to random targets 
@@ -80,6 +81,7 @@ public class SpawnersController : MonoBehaviour
 			Transform randomTarget = TargetLocations [Random.Range (TargetLocations.Count / 3, ((TargetLocations.Count * 60) / 100))];
 			agentNavMesh.SetDestination (randomTarget.position);
 			agentNavMesh.GetComponent<Renderer> ().material.color = Color.yellow;
+			agent.GetComponent <AgentsController> ()._target_id = randomTarget.gameObject.GetComponent <TargetController> ().GetID ();
 			agent.tag = "Medium";
 
 		} else if (value > 60 && value < 100) { //or to random targets 
@@ -87,6 +89,7 @@ public class SpawnersController : MonoBehaviour
 			Transform randomTarget = TargetLocations [Random.Range (((TargetLocations.Count * 60) / 100), TargetLocations.Count)];
 			agentNavMesh.SetDestination (randomTarget.position);
 			agentNavMesh.GetComponent<Renderer> ().material.color = Color.green;
+			agent.GetComponent <AgentsController> ()._target_id = randomTarget.gameObject.GetComponent <TargetController> ().GetID ();
 			agent.tag = "Poor";
 
 		

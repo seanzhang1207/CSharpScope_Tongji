@@ -82,7 +82,7 @@ Shader "Custom/TargetPopulationGradient" {
   			 	if (radius_ratio < 0) radius_ratio = 0;
   			 	gradient += _TargetValues[i] * radius_ratio;
   			 }
-  			 float3 rgb_color = hsv2rgb(gradient / 5, 0.7, 1.0);
+  			 float3 rgb_color = hsv2rgb(gradient / 4.2, 0.7, 1.0);
 
   			 output_texture.g = rgb_color.g;
   			 output_texture.r = rgb_color.r;
