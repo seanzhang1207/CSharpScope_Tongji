@@ -5,14 +5,10 @@ using System.Collections.Generic;
 
 public class TargetController : MonoBehaviour
 {
-	
+	public	int _id;
 	public  int _poor;
 	public  int _medium;
 	public  int _rich;
-
-
-
-
 
 	void OnTriggerEnter (Collider other)
 	{
@@ -49,9 +45,17 @@ public class TargetController : MonoBehaviour
 			return; 
 		} 
 
+
+		this.transform.parent.GetComponent<TargetManager>().UpdateTargetArray(_id, _poor, _medium, _rich);
+
 	}
 
+	void Update() {
+		this.transform.parent.GetComponent<TargetManager>().UpdateTargetArray(_id, _poor, _medium, _rich);
+	}
 
-		
+	public int GetID() {
+		return _id;
+	}
 }
 	
